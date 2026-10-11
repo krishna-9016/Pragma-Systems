@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Industries — Pragma Systems</title>
+  <meta name="description" content="Explore Pragma Systems 15 global industry sectors and 60 specialized business architectures.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230052ff'/><circle cx='8' cy='8' r='2.5' fill='white'/><circle cx='16' cy='8' r='2.5' fill='white'/><circle cx='8' cy='16' r='2.5' fill='white'/><circle cx='16' cy='16' r='2.5' fill='%2393c5fd'/></svg>">
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+
+  <!-- Background Decorative Texture -->
+  <div class="dot-matrix-bg" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Shared Global Navbar -->
+  <header class="site-navbar">
+    <div class="nav-container">
+      <a class="brand-logo" href="index.html#/">
+        <div class="logo-symbol" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="7" fill="#111827"/>
+            <circle cx="8" cy="8" r="2.2" fill="#ffffff"/>
+            <circle cx="16" cy="8" r="2.2" fill="#ffffff"/>
+            <circle cx="8" cy="16" r="2.2" fill="#ffffff"/>
+            <circle cx="16" cy="16" r="2.2" fill="#0052ff"/>
+          </svg>
+        </div>
+        <span class="brand-text">Pragma<span class="brand-sub">Systems</span></span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="index.html#/">Overview</a></li>
+          <li><a class="nav-link active" href="industries.html">Industries</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn-nav-cta" href="#portfolio-grid">
+          <span>Explore Industries</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/>
+            <path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- INDUSTRY EXPLORER VIEW -->
+  <main class="page-view" id="view-explorer">
+    <section class="explorer-section">
+      <!-- Header Section -->
+      <header class="explorer-header">
+        <div class="explorer-eyebrow">
+          <span>Directory</span>
+          <span>/</span>
+          <span>2026 Index</span>
+        </div>
+        <h1 class="explorer-title">Explore Industries</h1>
+        <p class="explorer-sub">
+          A curated index of strategic design frameworks, digital architectures, and bespoke interfaces tailored for market leaders across 15 global domains.
+        </p>
+      </header>
+
+      <!-- Search & Sector Command Toolbar -->
+      <div class="explorer-toolbar">
+        <div class="toolbar-controls-row">
+          <!-- Prominent Search Field -->
+          <div class="search-container">
+            <svg class="search-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" x2="16.65" y1="21" y2="16.65"/>
+            </svg>
+            <input
+              type="text"
+              id="industry-search"
+              class="search-input"
+              placeholder="Search by industry or concept (e.g. Dental, Architecture, Solar, Jewellery)..."
+              autocomplete="off"
+              aria-label="Search industries and concepts"
+            >
+            <button type="button" class="clear-search-btn" id="clear-search-btn" aria-label="Clear search">×</button>
+          </div>
+
+          <!-- Cool Sector Mega-Dropdown -->
+          <div class="sector-dropdown-wrapper" id="sector-dropdown-wrapper">
+            <button type="button" class="btn-sector-dropdown" id="btn-sector-dropdown" aria-expanded="false" aria-haspopup="true">
+              <span class="dropdown-sparkle">✦</span>
+              <span id="dropdown-active-label">All Industries</span>
+              <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+
+            <!-- Backdrop overlay for mobile -->
+            <div class="sector-dropdown-backdrop" id="sector-dropdown-backdrop"></div>
+
+            <!-- Floating Mega Menu / Mobile Bottom Sheet -->
+            <div class="sector-dropdown-menu" id="sector-dropdown-menu" role="menu">
+              <div class="sheet-drag-handle"></div>
+              <div class="dropdown-header-bar">
+                <span class="dropdown-header-title">Select Industry Sector</span>
+                <button type="button" class="btn-dropdown-all" id="btn-dropdown-reset-all">
+                  <span>Show All Industries</span>
+                </button>
+              </div>
+              <div class="dropdown-sectors-grid" id="dropdown-sectors-grid">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Filter Chip -->
+          <div class="active-filter-badge" id="active-filter-badge" style="display: none;">
+            <span id="active-filter-text">Healthcare & Medical</span>
+            <button type="button" id="btn-clear-active-filter" title="Clear filter">×</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Count Status -->
+      <div class="results-meta-bar">
+        <div class="results-count" id="results-count">
+          Showing all Industries & Website Concept Blocks
+        </div>
+      </div>
+
+      <!-- Industry Sections Container (All 15 Industries & 60 Concept Blocks Visible by Default) -->
+      <div class="industry-sections-container" id="industry-sections-container">
+        <!-- Dynamically rendered by explorer.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Global Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <strong>Pragma Systems</strong> &copy; 2026. Design & Architecture for Tomorrow's Leaders.
+      </div>
+      <ul class="footer-links">
+        <li><a class="footer-link" href="index.html#/">Overview</a></li>
+        <li><a class="footer-link" href="industries.html">Industry Directory</a></li>
+        <li><a class="footer-link" href="industries.html">60 Business Architectures</a></li>
+        <li><a class="footer-link" href="index.html#/">Privacy & Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initExplorer } from './src/js/explorer.js';
+    document.addEventListener('DOMContentLoaded', () => {
+      initExplorer();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pragma Systems — Digital Experiences for Every Industry</title>
+  <meta name="description" content="Pragma Systems architects high-impact digital experiences, bespoke design frameworks, and flagship web platforms tailored for 15 global industries.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230052ff'/><circle cx='8' cy='8' r='2.5' fill='white'/><circle cx='16' cy='8' r='2.5' fill='white'/><circle cx='8' cy='16' r='2.5' fill='white'/><circle cx='16' cy='16' r='2.5' fill='%2393c5fd'/></svg>">
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+
+  <!-- Background Decorative Texture (ChronoTask Inspiration) -->
+  <div class="dot-matrix-bg" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Shared Global Navbar -->
+  <header class="site-navbar">
+    <div class="nav-container">
+      <a class="brand-logo" id="brand-logo" href="#/">
+        <div class="logo-symbol" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="7" fill="#111827"/>
+            <circle cx="8" cy="8" r="2.2" fill="#ffffff"/>
+            <circle cx="16" cy="8" r="2.2" fill="#ffffff"/>
+            <circle cx="8" cy="16" r="2.2" fill="#ffffff"/>
+            <circle cx="16" cy="16" r="2.2" fill="#0052ff"/>
+          </svg>
+        </div>
+        <span class="brand-text">Pragma<span class="brand-sub">Systems</span></span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a class="nav-link active" id="nav-link-home" href="#/">Overview</a></li>
+          <li><a class="nav-link" id="nav-link-industries" href="#/industries">Industries</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn-nav-cta" id="nav-cta-btn" href="#/industries">
+          <span>Explore Industries</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/>
+            <path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       PAGE 1: HOMEPAGE VIEW (Inspired by ChronoTask)
+       ========================================================================= -->
+  <main class="page-view" id="view-home">
+    <section class="hero-section">
+      <!-- Floating Spatial & 3D Elements Stage -->
+      <div class="floating-elements-stage" aria-hidden="true">
+        <!-- 1. Top-Left: Tilted Pinned Strategic Note -->
+        <div class="floating-element float-pinned-note">
+          <div class="pin-tack"></div>
+          <p class="pinned-note-text">
+            "Transforming complex industry architectures into frictionless, award-winning digital experiences."
+          </p>
+        </div>
+
+        <!-- 2. Middle-Left: Floating 3D Check Tile -->
+        <div class="floating-element float-check-tile">
+          <div class="blue-check-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 3. Bottom-Left: System Performance & Vitality Card -->
+        <div class="floating-element float-tasks-card">
+          <div class="tasks-card-header">
+            <span class="tasks-card-title">System Performance</span>
+            <div class="status-live-dot">
+              <span class="pulse-circle"></span>
+              LIVE
+            </div>
+          </div>
+          <div class="task-item-row">
+            <div class="task-item-top">
+              <span>Domain Latency</span>
+              <span class="task-pct">99.8%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 98%;"></div>
+            </div>
+          </div>
+          <div class="task-item-row" style="margin-bottom: 0;">
+            <div class="task-item-top">
+              <span>Architecture Reliability</span>
+              <span class="task-pct">100%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Top-Right: Floating 3D Precision Stopwatch Badge -->
+        <div class="floating-element float-timer-tile">
+          <div class="timer-inner-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="10" x2="14" y1="2" y2="2"/>
+              <line x1="12" x2="15" y1="14" y2="11"/>
+              <circle cx="12" cy="14" r="8"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 5. Middle-Right: Reminders / Scheduled Deployment Card -->
+        <div class="floating-element float-reminders-card">
+          <div class="reminders-title">Release Architecture</div>
+          <div class="meeting-label">Global Flagship v4.2</div>
+          <div class="meeting-sub">15 Industry Domains Synchronized</div>
+          <div class="time-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            14:00 UTC Active
+          </div>
+        </div>
+
+        <!-- 6. Bottom-Right: 60 Specialized Sectors Ecosystem Widget -->
+        <div class="floating-element float-integrations-card">
+          <div class="integrations-label">60 Business Architectures</div>
+          <div class="app-icons-row">
+            <div class="app-micro-icon" title="FinTech">FT</div>
+            <div class="app-micro-icon" title="Deep Tech">AI</div>
+            <div class="app-micro-icon" title="Orbital Space">AS</div>
+            <div class="app-micro-icon" title="Haute Horlogerie">LX</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Central Content -->
+      <div class="hero-content">
+        <!-- Central 3D Floating Dot Cluster (ChronoTask homage) -->
+        <div class="hero-badge-container">
+          <div class="badge-3d-box" title="Pragma Systems 3D Matrix">
+            <div class="dot-cluster">
+              <div class="cluster-dot"></div>
+              <div class="cluster-dot highlight"></div>
+              <div class="cluster-dot"></div>
+              <div class="cluster-dot"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero-title reveal-fade-up">
+          Digital Experiences
+          <span class="hero-title-accent">for Every Industry.</span>
+        </h1>
+
+        <!-- Supporting Description -->
+        <p class="hero-description reveal-fade-up reveal-delay-1">
+          Architecting category-defining web architectures, bespoke design frameworks, and digital flagship platforms engineered for market pioneers.
+        </p>
+
+        <!-- Prominent Primary CTA (Navigates to Industry Explorer) -->
+        <div class="hero-cta-group reveal-fade-up reveal-delay-2">
+          <a class="btn-hero-primary" id="hero-cta-btn" href="#/industries">
+            <span>Explore Industries</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/>
+              <path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Metrics Ticker Strip -->
+    <section class="agency-strip reveal-fade-up reveal-delay-3" aria-label="System Metrics">
+      <div class="metric-col">
+        <div class="metric-number">15<span>+</span></div>
+        <div class="metric-label">Curated Global Sectors</div>
+      </div>
+      <div class="metric-col">
+        <div class="metric-number">60<span>+</span></div>
+        <div class="metric-label">Business Type Architectures</div>
+      </div>
+      <div class="metric-col">
+        <div class="metric-number">99.8<span>%</span></div>
+        <div class="metric-label">Performance Benchmark</div>
+      </div>
+      <div class="metric-col">
+        <div class="metric-number">100<span>%</span></div>
+        <div class="metric-label">Tailored Bespoke Engineering</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       PAGE 2: INDUSTRY EXPLORER VIEW (Inspired by Awwwards)
+       ========================================================================= -->
+  <main class="page-view hidden" id="view-explorer">
+    <section class="explorer-section">
+      <!-- Header Section -->
+      <header class="explorer-header">
+        <div class="explorer-eyebrow">
+          <span>Directory</span>
+          <span>/</span>
+          <span>2026 Index</span>
+        </div>
+        <h1 class="explorer-title">Explore Industries</h1>
+        <p class="explorer-sub">
+          A curated index of strategic design frameworks, digital architectures, and bespoke interfaces tailored for market leaders across 15 global domains.
+        </p>
+      </header>
+
+      <!-- Search & Sector Command Toolbar -->
+      <div class="explorer-toolbar">
+        <div class="toolbar-controls-row">
+          <!-- Prominent Search Field -->
+          <div class="search-container">
+            <svg class="search-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" x2="16.65" y1="21" y2="16.65"/>
+            </svg>
+            <input
+              type="text"
+              id="industry-search"
+              class="search-input"
+              placeholder="Search by industry or concept (e.g. Dental, Architecture, Solar, Jewellery)..."
+              autocomplete="off"
+              aria-label="Search industries and concepts"
+            >
+            <button type="button" class="clear-search-btn" id="clear-search-btn" aria-label="Clear search">×</button>
+          </div>
+
+          <!-- Cool Sector Mega-Dropdown -->
+          <div class="sector-dropdown-wrapper" id="sector-dropdown-wrapper">
+            <button type="button" class="btn-sector-dropdown" id="btn-sector-dropdown" aria-expanded="false" aria-haspopup="true">
+              <span class="dropdown-sparkle">✦</span>
+              <span id="dropdown-active-label">All Industries</span>
+              <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+
+            <!-- Backdrop overlay for mobile -->
+            <div class="sector-dropdown-backdrop" id="sector-dropdown-backdrop"></div>
+
+            <!-- Floating Mega Menu / Mobile Bottom Sheet -->
+            <div class="sector-dropdown-menu" id="sector-dropdown-menu" role="menu">
+              <div class="sheet-drag-handle"></div>
+              <div class="dropdown-header-bar">
+                <span class="dropdown-header-title">Select Industry Sector</span>
+                <button type="button" class="btn-dropdown-all" id="btn-dropdown-reset-all">
+                  <span>Show All Industries</span>
+                </button>
+              </div>
+              <div class="dropdown-sectors-grid" id="dropdown-sectors-grid">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Filter Chip -->
+          <div class="active-filter-badge" id="active-filter-badge" style="display: none;">
+            <span id="active-filter-text">Healthcare & Medical</span>
+            <button type="button" id="btn-clear-active-filter" title="Clear filter">×</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Count Status -->
+      <div class="results-meta-bar">
+        <div class="results-count" id="results-count">
+          Showing all Industries & Website Concept Blocks
+        </div>
+      </div>
+
+      <!-- Industry Sections Container (All 15 Industries & 60 Concept Blocks Visible by Default) -->
+      <div class="industry-sections-container" id="industry-sections-container">
+        <!-- Dynamically rendered by explorer.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Global Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <strong>Pragma Systems</strong> &copy; 2026. Design & Architecture for Tomorrow's Leaders.
+      </div>
+      <ul class="footer-links">
+        <li><a class="footer-link" href="#/">Overview</a></li>
+        <li><a class="footer-link" href="#/industries">Industry Directory</a></li>
+        <li><a class="footer-link" href="#/industries">60 Business Architectures</a></li>
+        <li><a class="footer-link" href="#/">Privacy & Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/js/app.js"></script>
+</body>
+</html>
