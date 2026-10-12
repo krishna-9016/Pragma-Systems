@@ -57,6 +57,15 @@ function setupRouting() {
   window.addEventListener('popstate', handleHash);
 
   // Wire CTA & Navigation Clicks
+  const editorialExploreBtn = document.getElementById('editorial-explore-btn');
+
+  if (editorialExploreBtn) {
+    editorialExploreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showPage('explorer');
+    });
+  }
+
   if (heroCtaBtn) {
     heroCtaBtn.addEventListener('click', (e) => {
       e.preventDefault();

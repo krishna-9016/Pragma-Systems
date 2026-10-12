@@ -5,29 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pragma Systems — Digital Experiences for Every Industry</title>
   <meta name="description" content="Pragma Systems architects high-impact digital experiences, bespoke design frameworks, and flagship web platforms tailored for 15 global industries.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230052ff'/><circle cx='8' cy='8' r='2.5' fill='white'/><circle cx='16' cy='8' r='2.5' fill='white'/><circle cx='8' cy='16' r='2.5' fill='white'/><circle cx='16' cy='16' r='2.5' fill='%2393c5fd'/></svg>">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/images/pragma-symbol@4x.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
 
-  <!-- Background Decorative Texture (ChronoTask Inspiration) -->
+  <!-- Background Decorative Texture -->
   <div class="dot-matrix-bg" aria-hidden="true"></div>
   <div class="ambient-glow" aria-hidden="true"></div>
 
   <!-- Shared Global Navbar -->
   <header class="site-navbar">
     <div class="nav-container">
-      <a class="brand-logo" id="brand-logo" href="#/">
-        <div class="logo-symbol" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <rect width="24" height="24" rx="7" fill="#111827"/>
-            <circle cx="8" cy="8" r="2.2" fill="#ffffff"/>
-            <circle cx="16" cy="8" r="2.2" fill="#ffffff"/>
-            <circle cx="8" cy="16" r="2.2" fill="#ffffff"/>
-            <circle cx="16" cy="16" r="2.2" fill="#0052ff"/>
-          </svg>
-        </div>
-        <span class="brand-text">Pragma<span class="brand-sub">Systems</span></span>
+      <a class="brand-logo" id="brand-logo" href="#/" aria-label="Pragma Systems Home">
+        <img src="/images/pragma-logo.png" 
+             srcset="/images/pragma-logo@2x.png 2x, /images/pragma-logo@4x.png 4x" 
+             alt="Pragma Systems" 
+             class="brand-logo-img" 
+             width="135" 
+             height="44">
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
@@ -39,7 +39,7 @@
 
       <div class="nav-actions">
         <a class="btn-nav-cta" id="nav-cta-btn" href="#/industries">
-          <span>Explore Industries</span>
+          <span>Explore</span>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"/>
             <path d="m12 5 7 7-7 7"/>
@@ -50,130 +50,47 @@
   </header>
 
   <!-- =========================================================================
-       PAGE 1: HOMEPAGE VIEW (Inspired by ChronoTask)
+       PAGE 1: HOMEPAGE VIEW (Editorial Gallery Aesthetic)
        ========================================================================= -->
   <main class="page-view" id="view-home">
-    <section class="hero-section">
-      <!-- Floating Spatial & 3D Elements Stage -->
-      <div class="floating-elements-stage" aria-hidden="true">
-        <!-- 1. Top-Left: Tilted Pinned Strategic Note -->
-        <div class="floating-element float-pinned-note">
-          <div class="pin-tack"></div>
-          <p class="pinned-note-text">
-            "Transforming complex industry architectures into frictionless, award-winning digital experiences."
-          </p>
-        </div>
-
-        <!-- 2. Middle-Left: Floating 3D Check Tile -->
-        <div class="floating-element float-check-tile">
-          <div class="blue-check-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-          </div>
-        </div>
-
-        <!-- 3. Bottom-Left: System Performance & Vitality Card -->
-        <div class="floating-element float-tasks-card">
-          <div class="tasks-card-header">
-            <span class="tasks-card-title">System Performance</span>
-            <div class="status-live-dot">
-              <span class="pulse-circle"></span>
-              LIVE
-            </div>
-          </div>
-          <div class="task-item-row">
-            <div class="task-item-top">
-              <span>Domain Latency</span>
-              <span class="task-pct">99.8%</span>
-            </div>
-            <div class="progress-track">
-              <div class="progress-fill" style="width: 98%;"></div>
-            </div>
-          </div>
-          <div class="task-item-row" style="margin-bottom: 0;">
-            <div class="task-item-top">
-              <span>Architecture Reliability</span>
-              <span class="task-pct">100%</span>
-            </div>
-            <div class="progress-track">
-              <div class="progress-fill" style="width: 100%;"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Top-Right: Floating 3D Precision Stopwatch Badge -->
-        <div class="floating-element float-timer-tile">
-          <div class="timer-inner-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="10" x2="14" y1="2" y2="2"/>
-              <line x1="12" x2="15" y1="14" y2="11"/>
-              <circle cx="12" cy="14" r="8"/>
-            </svg>
-          </div>
-        </div>
-
-        <!-- 5. Middle-Right: Reminders / Scheduled Deployment Card -->
-        <div class="floating-element float-reminders-card">
-          <div class="reminders-title">Release Architecture</div>
-          <div class="meeting-label">Global Flagship v4.2</div>
-          <div class="meeting-sub">15 Industry Domains Synchronized</div>
-          <div class="time-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-            14:00 UTC Active
-          </div>
-        </div>
-
-        <!-- 6. Bottom-Right: 60 Specialized Sectors Ecosystem Widget -->
-        <div class="floating-element float-integrations-card">
-          <div class="integrations-label">60 Business Architectures</div>
-          <div class="app-icons-row">
-            <div class="app-micro-icon" title="FinTech">FT</div>
-            <div class="app-micro-icon" title="Deep Tech">AI</div>
-            <div class="app-micro-icon" title="Orbital Space">AS</div>
-            <div class="app-micro-icon" title="Haute Horlogerie">LX</div>
-          </div>
-        </div>
+    <section class="editorial-hero-section">
+      <!-- Row 1: Signature Tag -->
+      <div class="editorial-row editorial-row-signature">
+        <span class="editorial-signature-text">(Pragma Systems)</span>
       </div>
 
-      <!-- Hero Central Content -->
-      <div class="hero-content">
-        <!-- Central 3D Floating Dot Cluster (ChronoTask homage) -->
-        <div class="hero-badge-container">
-          <div class="badge-3d-box" title="Pragma Systems 3D Matrix">
-            <div class="dot-cluster">
-              <div class="cluster-dot"></div>
-              <div class="cluster-dot highlight"></div>
-              <div class="cluster-dot"></div>
-              <div class="cluster-dot"></div>
-            </div>
-          </div>
-        </div>
+      <!-- Row 2: Category / Role -->
+      <div class="editorial-row editorial-row-role">
+        <span class="editorial-role-text">Visual and Interactive Systems Architecture</span>
+      </div>
 
-        <!-- Headline -->
-        <h1 class="hero-title reveal-fade-up">
-          Digital Experiences
-          <span class="hero-title-accent">for Every Industry.</span>
+      <!-- Row 3: Monumental Serif Headline -->
+      <div class="editorial-row editorial-row-headline">
+        <h1 class="editorial-main-headline">
+          <span class="headline-break">COMPOSING</span>
+          <span class="headline-break">VISUAL NARRATIVES</span>
+          <span class="headline-break">IN DIGITAL SPACE.</span>
         </h1>
+      </div>
 
-        <!-- Supporting Description -->
-        <p class="hero-description reveal-fade-up reveal-delay-1">
-          Architecting category-defining web architectures, bespoke design frameworks, and digital flagship platforms engineered for market pioneers.
+      <!-- Row 4: Supporting Philosophy / Description -->
+      <div class="editorial-row editorial-row-desc">
+        <p class="editorial-desc-text">
+          Our multi-disciplinary frameworks architect bespoke digital ecosystems for 15 global sectors, blending high-impact aesthetics with mission-critical engineering.
         </p>
+      </div>
 
-        <!-- Prominent Primary CTA (Navigates to Industry Explorer) -->
-        <div class="hero-cta-group reveal-fade-up reveal-delay-2">
-          <a class="btn-hero-primary" id="hero-cta-btn" href="#/industries">
-            <span>Explore Industries</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Row 5: Explore Action Button -->
+      <div class="editorial-row editorial-row-action">
+        <a class="btn-editorial-explore" id="editorial-explore-btn" href="#/industries">
+          <span class="btn-explore-text">Explore</span>
+          <span class="btn-explore-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14"/>
               <path d="m12 5 7 7-7 7"/>
             </svg>
-          </a>
-        </div>
+          </span>
+        </a>
       </div>
     </section>
 
@@ -290,7 +207,8 @@
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <strong>Pragma Systems</strong> &copy; 2026. Design & Architecture for Tomorrow's Leaders.
+        <img src="/images/pragma-symbol.png" srcset="/images/pragma-symbol@2x.png 2x" alt="" class="footer-brand-icon" width="16" height="24">
+        <span><strong>Pragma Systems</strong> &copy; 2026. Design & Architecture for Tomorrow's Leaders.</span>
       </div>
       <ul class="footer-links">
         <li><a class="footer-link" href="#/">Overview</a></li>

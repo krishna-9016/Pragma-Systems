@@ -37,6 +37,8 @@
 
   /* Typography */
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-editorial: 'Playfair Display', 'Cormorant Garamond', Didot, 'Bodoni MT', Georgia, serif;
+  --font-script: 'Caveat', cursive, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Elevation & Shadows */
@@ -158,16 +160,29 @@ body {
   align-items: center;
   gap: 0.65rem;
   text-decoration: none;
-  color: var(--text-primary);
-  font-weight: 700;
-  font-size: 1.125rem;
-  letter-spacing: -0.025em;
-  transition: opacity var(--transition-fast);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
   cursor: pointer;
+  line-height: 1;
 }
 
 .brand-logo:hover {
-  opacity: 0.85;
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.brand-logo-img {
+  height: 38px;
+  width: auto;
+  max-height: 42px;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+}
+
+@media (max-width: 640px) {
+  .brand-logo-img {
+    height: 32px;
+  }
 }
 
 .logo-symbol {
@@ -240,530 +255,279 @@ body {
 .btn-nav-cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: var(--electric-blue);
+  gap: 0.55rem;
+  background: #111216;
   color: #ffffff;
-  padding: 0.55rem 1.15rem;
+  padding: 0.55rem 1.35rem;
   border-radius: var(--radius-full);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.04em;
   text-decoration: none;
-  border: 1px solid transparent;
-  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: 0 2px 8px rgba(0, 82, 255, 0.2);
-  cursor: pointer;
-}
-
-.btn-nav-cta:hover {
-  background: var(--electric-blue-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px var(--electric-blue-glow);
-}
-
-.btn-nav-cta svg {
-  transition: transform var(--transition-fast);
-}
-
-.btn-nav-cta:hover svg {
-  transform: translateX(2px);
-}
-
-/* ==========================================================================
-   HOMEPAGE: HERO SECTION (ChronoTask Inspiration)
-   ========================================================================== */
-.hero-section {
-  position: relative;
-  min-height: calc(100vh - 72px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 1.5rem 6rem;
-  overflow: hidden;
-  perspective: 1200px;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 10;
-  max-width: 820px;
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Top Floating 3D Badge (ChronoTask 4-dot central badge homage) */
-.hero-badge-container {
-  margin-bottom: 2.25rem;
-  animation: floatSoft 5s ease-in-out infinite;
-}
-
-.badge-3d-box {
-  width: 64px;
-  height: 64px;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: var(--shadow-badge-3d), 0 20px 40px -10px rgba(0, 0, 0, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  transform-style: preserve-3d;
-  transition: transform 0.4s var(--ease-smooth);
-}
-
-.badge-3d-box:hover {
-  transform: translateY(-4px) rotateX(10deg) rotateY(-10deg);
-}
-
-.dot-cluster {
-  display: grid;
-  grid-template-columns: repeat(2, 12px);
-  gap: 6px;
-}
-
-.cluster-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #111827;
-  transition: transform 0.3s ease;
-}
-
-.cluster-dot.highlight {
-  background: var(--electric-blue);
-  box-shadow: 0 0 10px var(--electric-blue-glow);
-}
-
-/* Hero Headline */
-.hero-title {
-  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: var(--text-primary);
-  margin-bottom: 1.25rem;
-  max-width: 780px;
-}
-
-.hero-title-accent {
-  display: block;
-  font-weight: 700;
-  color: #374151;
-}
-
-/* Hero Description */
-.hero-description {
-  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-  font-weight: 400;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  max-width: 580px;
-  margin-bottom: 2.5rem;
-  letter-spacing: -0.015em;
-}
-
-/* Hero CTA Button */
-.hero-cta-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.btn-hero-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: var(--electric-blue);
-  color: #ffffff;
-  padding: 0.95rem 2.25rem;
-  border-radius: var(--radius-full);
-  font-size: 1.0625rem;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  text-decoration: none;
-  box-shadow: 0 4px 20px var(--electric-blue-glow), 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+  border: 1px solid rgba(18, 19, 22, 0.12);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 8px rgba(18, 19, 22, 0.08);
   cursor: pointer;
   position: relative;
   overflow: hidden;
 }
 
-.btn-hero-primary::after {
+.btn-nav-cta::after {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
+  left: -120%;
+  width: 60%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.6s ease;
+  transform: skewX(-20deg);
+  transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
 }
 
-.btn-hero-primary:hover {
-  background: var(--electric-blue-hover);
+.btn-nav-cta:hover {
+  background: #1e1f26;
   transform: translateY(-2px);
-  box-shadow: 0 8px 26px var(--electric-blue-glow), 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(18, 19, 22, 0.16);
 }
 
-.btn-hero-primary:hover::after {
-  left: 100%;
+.btn-nav-cta:hover::after {
+  left: 150%;
 }
 
-.btn-hero-primary svg {
-  transition: transform var(--transition-fast);
+.btn-nav-cta svg {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.btn-hero-primary:hover svg {
+.btn-nav-cta:hover svg {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   HOMEPAGE: EDITORIAL HERO SECTION (Maria Vasilyeva / Awwwards Inspiration)
+   ========================================================================== */
+.editorial-hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(18, 19, 22, 0.08);
+  background: transparent;
+}
+
+.editorial-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(18, 19, 22, 0.08);
+  padding: 1.15rem 2rem;
+  text-align: center;
+  position: relative;
+  transition: background-color var(--transition-fast);
+}
+
+/* Row 1: Signature Tag */
+.editorial-row-signature {
+  padding: 1.1rem 2rem 0.65rem;
+}
+
+.editorial-signature-text {
+  font-family: var(--font-script);
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #17181c;
+  letter-spacing: 0.02em;
+  transform: rotate(-0.5deg);
+  display: inline-block;
+  user-select: none;
+}
+
+/* Row 2: Category / Role */
+.editorial-row-role {
+  padding: 0.65rem 2rem;
+}
+
+.editorial-role-text {
+  font-family: var(--font-editorial);
+  font-size: clamp(1.025rem, 1.3vw, 1.225rem);
+  font-weight: 400;
+  color: #24252a;
+  letter-spacing: -0.01em;
+}
+
+/* Row 3: Monumental Serif Headline */
+.editorial-row-headline {
+  padding: 2.25rem 1.5rem;
+}
+
+.editorial-main-headline {
+  margin: 0 auto;
+  font-family: var(--font-editorial);
+  font-size: clamp(2.8rem, 6.8vw, 5.75rem);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -0.018em;
+  color: #111216;
+  text-transform: uppercase;
+  max-width: 1240px;
+}
+
+.headline-break {
+  display: block;
+}
+
+/* Row 4: Supporting Philosophy / Description */
+.editorial-row-desc {
+  padding: 1.45rem 2rem;
+}
+
+.editorial-desc-text {
+  margin: 0 auto;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.55;
+  color: #383940;
+  max-width: 680px;
+  letter-spacing: -0.01em;
+}
+
+/* Row 5: Explore Action Button */
+.editorial-row-action {
+  padding: 1.75rem 2rem 2.25rem;
+}
+
+.btn-editorial-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #111216;
+  color: #ffffff;
+  padding: 0.9rem 2.35rem 0.9rem 2.15rem;
+  border-radius: var(--radius-full);
+  font-size: 0.925rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(18, 19, 22, 0.15);
+  box-shadow: 0 4px 16px rgba(18, 19, 22, 0.12), 0 1px 3px rgba(18, 19, 22, 0.06);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.35s ease;
+  animation: luxuryExplorePulse 3.5s ease-in-out infinite;
+}
+
+@keyframes luxuryExplorePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(17, 18, 22, 0.25), 0 4px 16px rgba(18, 19, 22, 0.12);
+  }
+  60% {
+    box-shadow: 0 0 0 12px rgba(17, 18, 22, 0), 0 6px 20px rgba(18, 19, 22, 0.14);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(17, 18, 22, 0), 0 4px 16px rgba(18, 19, 22, 0.12);
+  }
+}
+
+.btn-editorial-explore::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.btn-editorial-explore:hover {
+  background: #1e1f26;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 34px rgba(18, 19, 22, 0.22), 0 4px 10px rgba(18, 19, 22, 0.08);
+}
+
+.btn-editorial-explore:hover::after {
+  left: 160%;
+}
+
+.btn-explore-text {
+  font-family: var(--font-sans);
+  letter-spacing: 0.08em;
+}
+
+.btn-explore-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease;
+}
+
+.btn-explore-icon svg {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-editorial-explore:hover .btn-explore-icon {
+  background: rgba(255, 255, 255, 0.22);
   transform: translateX(4px);
 }
 
-/* ==========================================================================
-   HERO FLOATING 3D ELEMENTS (Positioned around Hero like ChronoTask)
-   ========================================================================== */
-.floating-elements-stage {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 5;
-  overflow: visible;
+.btn-editorial-explore:hover .btn-explore-icon svg {
+  transform: translateX(1px);
 }
 
-/* Base floating element class with interactive pointer events */
-.floating-element {
-  position: absolute;
-  pointer-events: auto;
-  user-select: none;
-  transform-style: preserve-3d;
-  will-change: transform;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-}
-
-/* 1. TOP-LEFT: The Strategic Yellow Note (ChronoTask homage) */
-.float-pinned-note {
-  top: 10%;
-  left: 5%;
-  width: 250px;
-  background: #fef08a; /* Soft warm post-it yellow */
-  color: #713f12;
-  padding: 1.4rem 1.4rem 1.5rem;
-  border-radius: 4px;
-  box-shadow: 0 16px 36px -8px rgba(113, 63, 18, 0.15), 0 4px 10px rgba(0,0,0,0.05);
-  transform: rotate(-6deg);
-  font-family: var(--font-sans);
-  animation: floatSlowA 6.5s ease-in-out infinite;
-}
-
-.float-pinned-note:hover {
-  transform: rotate(-3deg) scale(1.03) translateY(-4px);
-}
-
-.pin-tack {
-  position: absolute;
-  top: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 14px;
-  height: 14px;
-  background: #ef4444; /* Red pin like reference */
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25), inset 0 2px 2px rgba(255, 255, 255, 0.6);
-}
-
-.pin-tack::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 5px;
-  width: 4px;
-  height: 4px;
-  background: #991b1b;
-  border-radius: 50%;
-}
-
-.pinned-note-text {
-  font-size: 0.875rem;
-  line-height: 1.45;
-  font-weight: 500;
-  font-style: italic;
-  letter-spacing: -0.01em;
-}
-
-/* 2. MIDDLE-LEFT: Floating 3D Check Tile */
-.float-check-tile {
-  top: 36%;
-  left: 8%;
-  width: 68px;
-  height: 68px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 18px 36px -10px rgba(0, 0, 0, 0.14), inset 0 1px 1px rgba(255, 255, 255, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(4deg);
-  animation: floatSlowB 7s ease-in-out infinite 0.5s;
-}
-
-.float-check-tile:hover {
-  transform: rotate(0deg) scale(1.08) translateY(-6px);
-}
-
-.blue-check-icon {
-  width: 40px;
-  height: 40px;
-  background: var(--electric-blue);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  box-shadow: 0 4px 12px var(--electric-blue-glow);
-}
-
-/* 3. BOTTOM-LEFT: Today's Tasks / System Performance Card */
-.float-tasks-card {
-  bottom: 8%;
-  left: 5%;
-  width: 270px;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 1.15rem 1.25rem;
-  box-shadow: var(--shadow-float);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  animation: floatSlowA 8s ease-in-out infinite 1s;
-}
-
-.float-tasks-card:hover {
-  transform: translateY(-6px) scale(1.02);
-}
-
-.tasks-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.85rem;
-}
-
-.tasks-card-title {
-  font-size: 0.825rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  letter-spacing: -0.01em;
-}
-
-.status-live-dot {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.6875rem;
-  font-family: var(--font-mono);
-  color: #16a34a;
-  font-weight: 600;
-}
-
-.pulse-circle {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #16a34a;
-  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
-}
-
-.task-item-row {
-  margin-bottom: 0.75rem;
-}
-
-.task-item-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-bottom: 0.35rem;
-}
-
-.task-pct {
-  color: var(--electric-blue);
-  font-family: var(--font-mono);
-  font-weight: 700;
-}
-
-.progress-track {
-  width: 100%;
-  height: 5px;
-  background: #f1f5f9;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #38bdf8, var(--electric-blue));
-  border-radius: 10px;
-}
-
-/* 4. TOP-RIGHT: Precision Timer Widget (ChronoTask homage) */
-.float-timer-tile {
-  top: 14%;
-  right: 12%;
-  width: 66px;
-  height: 66px;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(8deg);
-  animation: floatSlowB 6.8s ease-in-out infinite 0.7s;
-}
-
-.float-timer-tile:hover {
-  transform: rotate(0deg) scale(1.08) translateY(-6px);
-}
-
-.timer-inner-icon {
-  color: #1e293b;
-}
-
-/* 5. MIDDLE-RIGHT: Reminders / Tabbed Card (ChronoTask homage) */
-.float-reminders-card {
-  top: 10%;
-  right: 4%;
-  width: 250px;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 1.15rem 1.25rem;
-  box-shadow: var(--shadow-float);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  transform: rotate(2deg);
-  animation: floatSlowA 7.5s ease-in-out infinite 1.2s;
-}
-
-.float-reminders-card:hover {
-  transform: rotate(0deg) translateY(-5px);
-}
-
-.reminders-title {
-  font-size: 0.825rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.4rem;
-}
-
-.meeting-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-}
-
-.meeting-sub {
-  font-size: 0.6875rem;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-}
-
-.time-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  background: #f0f7ff;
-  color: var(--electric-blue);
-  font-size: 0.7rem;
-  font-family: var(--font-mono);
-  font-weight: 600;
-  padding: 0.25rem 0.6rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid rgba(0, 82, 255, 0.15);
-}
-
-/* 6. BOTTOM-RIGHT: 100+ Integrations / Ecosystem Card (ChronoTask homage) */
-.float-integrations-card {
-  bottom: 8%;
-  right: 6%;
-  width: 260px;
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 1.15rem 1.25rem;
-  box-shadow: var(--shadow-float);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  animation: floatSlowB 8.5s ease-in-out infinite 1.8s;
-}
-
-.float-integrations-card:hover {
-  transform: translateY(-6px) scale(1.02);
-}
-
-.integrations-label {
-  font-size: 0.825rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.75rem;
-}
-
-.app-icons-row {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-}
-
-.app-micro-icon {
-  width: 44px;
-  height: 44px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.app-micro-icon:hover {
-  transform: translateY(-2px);
-  border-color: var(--electric-blue);
+@media (max-width: 768px) {
+  .editorial-row-headline {
+    padding: 2.25rem 1rem;
+  }
+  .editorial-main-headline {
+    font-size: clamp(2.25rem, 9vw, 3.5rem);
+    line-height: 1.05;
+  }
 }
 
 /* ==========================================================================
-   HOMEPAGE: KEY METRICS TICKER STRIP
+   HOMEPAGE: KEY METRICS TICKER STRIP (Editorial Grid Extension)
    ========================================================================== */
 .agency-strip {
   width: 100%;
-  max-width: 1240px;
-  margin: 0 auto 3rem;
-  padding: 1.5rem 2rem;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
+  max-width: 100%;
+  margin: 0;
+  padding: 2.25rem 2rem;
+  background: var(--bg-primary);
+  border-bottom: 1px solid rgba(18, 19, 22, 0.08);
+  border-radius: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   z-index: 10;
   position: relative;
+  text-align: center;
 }
 
 .metric-col {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .metric-number {
-  font-size: 1.75rem;
-  font-weight: 800;
+  font-family: var(--font-editorial);
+  font-size: 2.25rem;
+  font-weight: 600;
   color: var(--text-primary);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   display: flex;
   align-items: baseline;
   gap: 0.2rem;
@@ -771,12 +535,25 @@ body {
 
 .metric-number span {
   color: var(--electric-blue);
+  font-size: 1.8rem;
 }
 
 .metric-label {
-  font-size: 0.8125rem;
+  font-size: 0.825rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 768px) {
+  .agency-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem 1rem;
+    padding: 1.75rem 1rem;
+  }
+  .metric-number {
+    font-size: 1.85rem;
+  }
 }
 
 /* ==========================================================================
@@ -1814,6 +1591,16 @@ mark.search-highlight {
 .footer-brand {
   font-size: 0.875rem;
   color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.footer-brand-icon {
+  height: 20px;
+  width: auto;
+  opacity: 0.85;
+  flex-shrink: 0;
 }
 
 .footer-brand strong {

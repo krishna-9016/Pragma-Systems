@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explore Industries — Pragma Systems</title>
   <meta name="description" content="Explore Pragma Systems 15 global industry sectors and 60 specialized business architectures.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230052ff'/><circle cx='8' cy='8' r='2.5' fill='white'/><circle cx='16' cy='8' r='2.5' fill='white'/><circle cx='8' cy='16' r='2.5' fill='white'/><circle cx='16' cy='16' r='2.5' fill='%2393c5fd'/></svg>">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/images/pragma-symbol@4x.png">
   <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
@@ -17,17 +18,13 @@
   <!-- Shared Global Navbar -->
   <header class="site-navbar">
     <div class="nav-container">
-      <a class="brand-logo" href="index.html#/">
-        <div class="logo-symbol" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <rect width="24" height="24" rx="7" fill="#111827"/>
-            <circle cx="8" cy="8" r="2.2" fill="#ffffff"/>
-            <circle cx="16" cy="8" r="2.2" fill="#ffffff"/>
-            <circle cx="8" cy="16" r="2.2" fill="#ffffff"/>
-            <circle cx="16" cy="16" r="2.2" fill="#0052ff"/>
-          </svg>
-        </div>
-        <span class="brand-text">Pragma<span class="brand-sub">Systems</span></span>
+      <a class="brand-logo" id="brand-logo" href="index.html#/" aria-label="Pragma Systems Home">
+        <img src="/images/pragma-logo.png" 
+             srcset="/images/pragma-logo@2x.png 2x, /images/pragma-logo@4x.png 4x" 
+             alt="Pragma Systems" 
+             class="brand-logo-img" 
+             width="135" 
+             height="44">
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
@@ -39,7 +36,7 @@
 
       <div class="nav-actions">
         <a class="btn-nav-cta" href="#portfolio-grid">
-          <span>Explore Industries</span>
+          <span>Explore</span>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"/>
             <path d="m12 5 7 7-7 7"/>
@@ -139,7 +136,8 @@
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <strong>Pragma Systems</strong> &copy; 2026. Design & Architecture for Tomorrow's Leaders.
+        <img src="/images/pragma-symbol.png" srcset="/images/pragma-symbol@2x.png 2x" alt="" class="footer-brand-icon" width="16" height="24">
+        <span><strong>Pragma Systems</strong> &copy; 2026. Design & Architecture for Tomorrow's Leaders.</span>
       </div>
       <ul class="footer-links">
         <li><a class="footer-link" href="index.html#/">Overview</a></li>
